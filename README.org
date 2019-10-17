@@ -1,0 +1,7 @@
+** 17 Oct 2019
+
+First data file from Adam: [[file:w34_testData.csv]]
+
+[[file:w34_testData-figure.R]] makes [[file:w34_testData-figure.png]]
+
+
