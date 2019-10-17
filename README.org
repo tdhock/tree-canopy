@@ -1,7 +1,18 @@
+** Tree canopy estimation project
+
+Can optimal changepoint models help predict/determine canopy height?
+
+The commands required to re-make the figures are documented in
+[[file:Makefile]], e.g. type =make w34_testData-figure.png= on the command
+line to re-make that figure.
+
+[[file:packages.R]] should be automatically run in order to install the
+required packages.
+
 ** 17 Oct 2019
 
-First data file from Adam: [[file:w34_testData.csv]]
+First data file from Adam: [[file:w34_testData.csv]],
+[[file:w34_testData-figure.R]] makes
 
-[[file:w34_testData-figure.R]] makes [[file:w34_testData-figure.png]]
-
+[[file:w34_testData-figure.png]]
 
