@@ -14,7 +14,7 @@ w34[, height.mid := (height.lower+height.upper)/2]
 
 table(w34$treeID)
 
-some.trees <- w34[treeID %in% c(1, 2, 3, 13, 9, 11, 16, 19)]
+some.trees <- w34[!is.na(`95th_eucDist`)]
 
 gg.data <- ggplot()+
   theme_bw()+
@@ -22,11 +22,13 @@ gg.data <- ggplot()+
   facet_wrap("treeID", labeller=label_both)+
   geom_point(aes(
     `95th_eucDist`, height.mid),
+    shape=1,
     data=some.trees)
 
 g <- gfpop::graph(
   gfpop::Edge("trunk", "canopy", "up"),
-  gfpop::Edge("canopy", "canopy", "down"))
+  gfpop::Edge("canopy", "canopy", "down"),
+  all.null.edges=TRUE)
 
 seg.dt <- some.trees[, {
   fit <- gfpop::gfpop(`95th_eucDist`, g)
@@ -55,6 +57,6 @@ gg.model <- gg.data+
   xlab("Distance/radius from trunk parallel to ground (meters)")+
   ylab("Height from ground (meters)")
 
-png("w34_testData-figure.png", 6, 6, units="in", res=100)
+png("w34_testData-figure.png", 10, 10, units="in", res=100)
 print(gg.model)
 dev.off()

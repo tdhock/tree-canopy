@@ -61,5 +61,5 @@ works_with_R(
   ggplot2="3.2.1",
   namedCapture="2019.7.30",
   nc="2019.9.16",
-  "tdhock/gfpop@23046c8131cb1bdca9b8392ad8225c20417a6237")
+  "tdhock/gfpop@931f7f108d3b58434156bcf2efe387f81ec8e42b")
 
